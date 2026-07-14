@@ -1,0 +1,13 @@
+{
+  "device": "desktop",
+  "config": "exp1_baseline",
+  "model": "gemma-2-2b-it",
+  "n_queries": 200,
+  "warmup": 5,
+  "embedder_backend": "fastembed",
+  "generator_backend": "llama.cpp-server",
+  "is_mock": false,
+  "run_start": 1783195702.376606,
+  "run_end": 1783195748.5327053,
+  "duration_s": 46.155940532684326
+}

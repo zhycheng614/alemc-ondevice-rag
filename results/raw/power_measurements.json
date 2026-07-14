@@ -1,0 +1,30 @@
+{
+  "_note": "Directly-measured device power figures used to derive the energy dimension per tier, with the measurement method for each. All whole-device unless noted.",
+  "laptop": {
+    "device": "Snapdragon X Elite (Windows-on-ARM)",
+    "method": "WMI BatteryStatus.DischargeRate integrated over per-query windows; idle baseline subtracted",
+    "idle_w": 28.1,
+    "run_mean_w": 24.8,
+    "energy_basis": "per-query trapezoidal integration of instantaneous discharge power (whole-device, gross); idle-subtracted also reported",
+    "note": "measured on battery; screen on"
+  },
+  "phone": {
+    "device": "Snapdragon 8 Elite (SM8750, ASUS AI2501)",
+    "method": "no-root dumpsys battery Charge counter (uAh) delta x pack voltage over a sustained-load window; idle window for baseline",
+    "idle_w": 7.8,
+    "sustained_generation_w": 16.6,
+    "inference_attributable_w": 8.8,
+    "run_mean_w": 8.8,
+    "energy_basis": "sustained-generation whole-device power (16.6 W) x measured inference latency; inference-attributable = 16.6-7.8 = 8.8 W",
+    "note": "measured on battery over adb-WiFi (USB unplugged); charge-counter resolution ~10-30 mAh so per-run mean is reliable, per-query is not"
+  },
+  "desktop": {
+    "device": "RTX 5070 Ti (desktop)",
+    "method": "NVML nvmlDeviceGetPowerUsage (GPU-package), 10 Hz, trapezoidal-integrated per query by samplers/energy_integrate.py; idle baseline measured for 60 s before the run",
+    "idle_w": 31.9,
+    "run_mean_w": 97.9,
+    "run_max_w": 130.6,
+    "energy_basis": "per-query trapezoidal integration of GPU-package power (gross); idle-subtracted also reported per query",
+    "note": "GPU-package power only (NVML), not whole-system; a wall meter or CPU RAPL would be needed for that. 200/200 queries had energy filled (none excluded)."
+  }
+}

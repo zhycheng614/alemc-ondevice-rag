@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Model weights — obtain locally per MODEL.md (large, licensed separately)
+models/
+*.gguf
+
+# Third-party toolchain and build outputs (clone/build per MODEL.md)
+vendor/
+build/
+build-*/
+
+# Transient run logs / scratch
+*.log
+out.txt
+timing.txt
+server.log
+nohup.out
+
+# NOTE: data/ blobs (corpus.jsonl, index.faiss, passages.npy, passages_meta.jsonl)
+# and results/ are intentionally COMMITTED — they are the frozen, authoritative
+# inputs and outputs behind the paper. Do NOT add them here.

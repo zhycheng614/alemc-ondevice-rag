@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the accompanying paper (below) and this repository."
+title: "ALEMC on-device RAG reproducibility bundle"
+abstract: >-
+  Code and data reproducing the empirical ALEMC (Accuracy, Latency, Energy,
+  Memory, Carbon) study of sustainable on-device Retrieval-Augmented Generation
+  with small language models, across phone / laptop / desktop hardware tiers.
+type: software
+version: 1.0.0
+date-released: "2026-07-13"
+license: MIT
+repository-code: "https://github.com/zhycheng614/alemc-ondevice-rag"
+authors:
+  - family-names: Cheng
+    given-names: Zhiyuan
+    affiliation: "Stanford University"
+    orcid: "https://orcid.org/0009-0003-2845-5322"
+  - family-names: Lai
+    given-names: Longying
+    affiliation: "University of Rochester"
+  - family-names: Liu
+    given-names: Yue
+    affiliation: "Rutgers University"
+  - family-names: Sun
+    given-names: Yu
+    affiliation: "University of Pennsylvania"
+preferred-citation:
+  type: article
+  title: "Toward Sustainable On-Device Intelligence: A Survey on Energy-Efficient RAG Systems with Small Language Models"
+  authors:
+    - family-names: Cheng
+      given-names: Zhiyuan
+    - family-names: Lai
+      given-names: Longying
+    - family-names: Liu
+      given-names: Yue
+    - family-names: Sun
+      given-names: Yu
+  year: 2026

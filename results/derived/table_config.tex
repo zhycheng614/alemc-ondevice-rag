@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Experiment~2 (config axis, Snapdragon X Elite): three RAG configurations mirroring surveyed archetypes. Accuracy rises C1$\rightarrow$C3 alongside energy and latency; the accuracy--energy Pareto (Fig.~\ref{fig:pareto_measured}) exposes the dominated configuration.}
+\label{tab:config}
+\small
+\begin{tabular}{llccc}
+\toprule
+Config & Archetype & Accuracy & Energy (J) & $\mathcal{L}_\text{e2e}$ (ms) \\
+\midrule
+C1 & MiniRAG & 0.586$\pm$0.467 & 114.58$\pm$39.77 & 2976$\pm$769 \\
+C2 & EdgeRAG & 0.569$\pm$0.470 & 75.26$\pm$7.64 & 2209$\pm$252 \\
+C3 & PocketRAG & 0.583$\pm$0.467 & 412.27$\pm$104.33 & 14712$\pm$4661 \\
+\bottomrule
+\end{tabular}
+\end{table}

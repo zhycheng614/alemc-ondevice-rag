@@ -1,0 +1,20 @@
+# Core (required)
+numpy>=1.24
+faiss-cpu>=1.8         # brute-force IndexFlatIP retrieval; installs on ARM64 Windows
+
+# Query embedding — no-torch path (preferred on ARM/Termux and this X Elite host)
+fastembed>=0.3         # ONNX bge-small-en-v1.5, pulls onnxruntime; avoids PyTorch
+
+# Generation backend — either is fine; the CLI path (llama.cpp binary) is
+# preferred on-device because it exposes --timings for TTFT/prefill/decode.
+llama-cpp-python>=0.2  # optional if you use the llama.cpp CLI binary directly
+
+# Datasets for query/corpus preparation (offline hub only)
+datasets>=2.14         # HuggingFace datasets: Natural Questions, HotpotQA, wiki_dpr
+
+# Analysis / figures (offline hub only)
+matplotlib>=3.7
+
+# Optional: RAGAS faithfulness via a local judge. If absent, faithfulness is
+# computed with the lightweight lexical proxy in scoring/score_accuracy.py.
+# sentence-transformers>=2.2   # heavy (pulls torch); only for the judge on the hub

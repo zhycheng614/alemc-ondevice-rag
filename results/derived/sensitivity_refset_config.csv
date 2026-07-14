@@ -1,0 +1,5 @@
+dropped,top_balanced,ranking
+(none / full set),laptop/C1,laptop/C1 > laptop/C2 > laptop/C3
+laptop/C1,laptop/C2,laptop/C2 > laptop/C3
+laptop/C2,laptop/C1,laptop/C1 > laptop/C3
+laptop/C3,laptop/C2,laptop/C2 > laptop/C1

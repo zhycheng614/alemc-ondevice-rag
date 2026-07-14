@@ -1,0 +1,13 @@
+{
+  "_note": "Memory footprint (MiB) measured on the RTX 5070 Ti desktop for the resident llama-server (CUDA build, -ngl 99) plus the pipeline process, via PowerShell Get-Process WorkingSet64 (host RAM; GPU VRAM is separate and not reflected in process RSS under WDDM). Unlike the phone/laptop CPU backends, the CUDA server's host working set grows substantially over the course of a sustained run rather than plateauing after a short warm-up: freshly loaded (before any query) it is ~2.0 GB; after a controlled 10-query warm-up mixing both datasets it is ~2.7 GB; after serving the full 200-query frozen set it reaches ~10.3 GB and stops growing (matches PeakWorkingSet64 read immediately after the run). This was confirmed reproducible on a second, independently restarted server (fresh load 2026.5 MB -> 2683.1 MB after 10 mixed queries -> 5879 MB after 100 squad-only queries), i.e. a genuine sustained-serving growth (CUDA host-buffer/allocator caching under WDDM), not a one-off fluke or a short-warm-up-representative artifact like the laptop's mmap'd-page drift. We therefore report the directly observed PEAK over the full run (not a short-warmup steady-state, and not the naive per-query mean, which would understate/misrepresent a monotonic ramp) as the honest Memory figure for this tier -- state this explicitly in the paper as a real, measured characteristic of GPU-backed serving under sustained load, distinct from the CPU-tier methodology.",
+  "device": "desktop",
+  "model": "gemma-2-2b-it-Q4_K_M",
+  "measurement": "PowerShell Get-Process WorkingSet64 (llama-server) + pipeline peak RSS",
+  "fresh_load_mb": 2026.5,
+  "after_10query_mixed_warmup_mb": 2683.1,
+  "after_100query_squad_only_mb": 5879.0,
+  "peak_after_full_200query_run_mb": 10316.3,
+  "peak_mb": {
+    "exp1_baseline": 10316.3
+  }
+}

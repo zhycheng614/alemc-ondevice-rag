@@ -1,0 +1,13 @@
+{
+  "device": "phone",
+  "config": "exp1_baseline",
+  "model": "gemma-2-2b-it",
+  "n_queries": 60,
+  "warmup": 5,
+  "embedder_backend": "fastembed",
+  "generator_backend": "llama.cpp-adb",
+  "is_mock": false,
+  "run_start": 1783126518.6114583,
+  "run_end": 1783128184.1669629,
+  "duration_s": 1665.5546255111694
+}

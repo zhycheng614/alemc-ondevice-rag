@@ -1,0 +1,10 @@
+profile,system,rank,S_ALEMC,g_accuracy,g_latency,g_energy,g_memory,g_carbon,accuracy,e2e_ms,energy_j,peak_rss_mb,carbon_gco2e
+accuracy-first,laptop/exp1_baseline,1,0.81425,0.925,0.826,0.6936,0.7428,0.6936,0.6238,4763.53,144.2243,4499.0,0.01201869
+accuracy-first,desktop/exp1_baseline,2,0.63804,1.0,1.0,1.0,0.05,1.0,0.6301,105.31,11.091,10316.3,0.00092425
+accuracy-first,phone/exp1_baseline,3,0.07837,0.05,0.05,0.05,1.0,0.05,0.5503,25535.74,423.8933,2339.0,0.03532444
+efficiency-first,laptop/exp1_baseline,1,0.76201,0.925,0.826,0.6936,0.7428,0.6936,0.6238,4763.53,144.2243,4499.0,0.01201869
+efficiency-first,desktop/exp1_baseline,2,0.63804,1.0,1.0,1.0,0.05,1.0,0.6301,105.31,11.091,10316.3,0.00092425
+efficiency-first,phone/exp1_baseline,3,0.07837,0.05,0.05,0.05,1.0,0.05,0.5503,25535.74,423.8933,2339.0,0.03532444
+balanced,laptop/exp1_baseline,1,0.77984,0.925,0.826,0.6936,0.7428,0.6936,0.6238,4763.53,144.2243,4499.0,0.01201869
+balanced,desktop/exp1_baseline,2,0.63804,1.0,1.0,1.0,0.05,1.0,0.6301,105.31,11.091,10316.3,0.00092425
+balanced,phone/exp1_baseline,3,0.07837,0.05,0.05,0.05,1.0,0.05,0.5503,25535.74,423.8933,2339.0,0.03532444

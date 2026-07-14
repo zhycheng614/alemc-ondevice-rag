@@ -1,0 +1,4 @@
+system,rank_accuracy-first,score_accuracy-first,rank_efficiency-first,score_efficiency-first,rank_balanced,score_balanced
+laptop/C1,1,0.85486,1,0.83262,1,0.83993
+laptop/C2,2,0.30171,2,0.54928,2,0.47287
+laptop/C3,3,0.15319,3,0.08752,3,0.10067

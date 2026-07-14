@@ -1,0 +1,39 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=0.78]
+  \foreach \r in {1,2,3,4,5} {
+    \pgfmathsetmacro{\rr}{\r * 0.5}
+    \draw[gray!30, thin] (90:\rr cm) -- (18:\rr cm) -- (-54:\rr cm) -- (-126:\rr cm) -- (-198:\rr cm) -- cycle;}
+  \foreach \a in {90,18,-54,-126,-198} {\draw[gray!50, thin] (0,0) -- (\a:2.5cm);}
+  \node[font=\small\bfseries] at (90:3.0cm) {Accuracy};
+  \node[font=\small\bfseries] at (18:3.2cm) {Latency};
+  \node[font=\small\bfseries, align=center] at (-54:3.2cm) {Energy\\[-1pt]Eff.};
+  \node[font=\small\bfseries, align=center] at (-126:3.2cm) {Memory\\[-1pt]Eff.};
+  \node[font=\small\bfseries, align=center] at (-198:3.2cm) {Carbon\\[-1pt]Eff.};
+  \draw[thick, pillarblue, fill=pillarblue, fill opacity=0.08] (90:0.50cm) -- (18:0.50cm) -- (-54:0.50cm) -- (-126:2.50cm) -- (-198:0.50cm) -- cycle;
+  \fill[pillarblue] (90:0.50cm) circle (1.5pt);
+  \fill[pillarblue] (18:0.50cm) circle (1.5pt);
+  \fill[pillarblue] (-54:0.50cm) circle (1.5pt);
+  \fill[pillarblue] (-126:2.50cm) circle (1.5pt);
+  \fill[pillarblue] (-198:0.50cm) circle (1.5pt);
+  \draw[thick, pillarred, fill=pillarred, fill opacity=0.08] (90:2.34cm) -- (18:2.13cm) -- (-54:1.85cm) -- (-126:1.96cm) -- (-198:1.85cm) -- cycle;
+  \fill[pillarred] (90:2.34cm) circle (1.5pt);
+  \fill[pillarred] (18:2.13cm) circle (1.5pt);
+  \fill[pillarred] (-54:1.85cm) circle (1.5pt);
+  \fill[pillarred] (-126:1.96cm) circle (1.5pt);
+  \fill[pillarred] (-198:1.85cm) circle (1.5pt);
+  \draw[thick, orange!80!black, fill=orange, fill opacity=0.08] (90:2.50cm) -- (18:2.50cm) -- (-54:2.50cm) -- (-126:0.50cm) -- (-198:2.50cm) -- cycle;
+  \fill[orange!80!black] (90:2.50cm) circle (1.5pt);
+  \fill[orange!80!black] (18:2.50cm) circle (1.5pt);
+  \fill[orange!80!black] (-54:2.50cm) circle (1.5pt);
+  \fill[orange!80!black] (-126:0.50cm) circle (1.5pt);
+  \fill[orange!80!black] (-198:2.50cm) circle (1.5pt);
+  \begin{scope}[shift={(3.2,-2.2)}]
+    \draw[thick,pillarblue] (0,0.0) -- (0.4,0.0); \node[right,font=\footnotesize] at (0.45,0.0) {Snapdragon 8 Elite};
+    \draw[thick,pillarred] (0,-0.45) -- (0.4,-0.45); \node[right,font=\footnotesize] at (0.45,-0.45) {Snapdragon X Elite};
+    \draw[thick,orange!80!black] (0,-0.9) -- (0.4,-0.9); \node[right,font=\footnotesize] at (0.45,-0.9) {RTX 5070 Ti};
+  \end{scope}
+\end{tikzpicture}
+\caption{Measured ALEMC profile across the three hardware tiers (Experiment~1). Each axis is efficiency-normalized over the compared set so that a larger radius is better on every dimension (latency, energy, memory, and carbon are inverted). The RTX~5070~Ti reaches the frontier on accuracy, latency, energy, and carbon but collapses on the memory axis; the Snapdragon~X~Elite is the most balanced profile. }
+\label{fig:radar_measured}
+\end{figure}

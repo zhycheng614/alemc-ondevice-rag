@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\caption{Experiment~1 (cross-tier): the identical RAG pipeline (Gemma-2-2B \texttt{Q4\_K\_M}, dense retrieval, $k{=}5$) measured across three hardware tiers. Accuracy is device-independent (scored centrally) and held approximately constant by design; energy spans a wide range across tiers. Carbon at the medium grid intensity (300\,gCO$_2$/kWh).}
+\label{tab:crosstier}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Tier / Device & Accuracy & $\mathcal{L}_\text{e2e}$ (ms) & Energy (J) & Memory (MB) & Carbon (gCO$_2$e) \\
+\midrule
+mobile / Snapdragon 8 Elite & 0.550$\pm$0.433 & 25536$\pm$5752 & 423.89$\pm$221.45 & 2339 & 0.0353 \\
+edge / Snapdragon X Elite & 0.624$\pm$0.450 & 4764$\pm$915 & 144.22$\pm$27.40 & 4499 & 0.0120 \\
+desktop / RTX 5070 Ti & 0.630$\pm$0.449 & 105$\pm$18 & 11.09$\pm$2.17 & 10316 & 0.0009 \\
+\bottomrule
+\end{tabular}
+\end{table*}

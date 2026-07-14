@@ -1,0 +1,19 @@
+{
+  "_note": "Clean steady-state memory footprints (MiB) measured on the Snapdragon X Elite laptop, summed over the resident llama-server (model weights + KV cache) and the pipeline process, after an 8-query warm-up with a freshly restarted server. These replace the per-query peak_rss values from the long production run, whose Windows working-set accounting drifted upward (memory-mapped GGUF pages + KV growth over ~800 queries) and did not reflect a representative deployment footprint. Measurement: PowerShell Get-Process WorkingSet64.",
+  "device": "laptop",
+  "model": "gemma-2-2b-it-Q4_K_M",
+  "server_ws_mb": {
+    "exp1_baseline": 4199,
+    "C1": 4116,
+    "C2": 3877,
+    "C3": 4300
+  },
+  "pipeline_rss_mb": 300,
+  "total_mb": {
+    "exp1_baseline": 4499,
+    "C1": 4416,
+    "C2": 4177,
+    "C3": 4600
+  },
+  "c3_note": "C3 (k=10) server WS measurement timed out during the clean re-probe; value estimated from KV-cache scaling relative to the k=3/k=5 configs. Flagged as estimate."
+}

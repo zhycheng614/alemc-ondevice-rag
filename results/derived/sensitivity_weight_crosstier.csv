@@ -1,0 +1,4 @@
+system,rank_accuracy-first,score_accuracy-first,rank_efficiency-first,score_efficiency-first,rank_balanced,score_balanced
+desktop/exp1_baseline,2,0.63804,2,0.63804,2,0.63804
+laptop/exp1_baseline,1,0.81425,1,0.76201,1,0.77984
+phone/exp1_baseline,3,0.07837,3,0.07837,3,0.07837
